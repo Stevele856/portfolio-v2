@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vu portfolio</title>
+
+    <link rel="stylesheet" href="/src/css/style.css">
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="progress-bar fixed top-0 left-0 h-1 w-[0%] bg-orange-400 z-500 lg:hidden"></div>
+    <!-- Custom cursor -->
+    <div class="cursor"></div>
+
+    <!-- HEADER -->
+    <header class="header h-20 flex items-center justify-center max-w-[1920px] mx-auto">
+      <div class="relative flex items-center justify-center h-full w-full px-8">
+        
+        <!-- MOBILE Animated Hamburger / X Icon -->
+        <div class="flex lg:hidden absolute right-4">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg id="menu-icon" class="w-8 h-8" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <line id="line1" x1="4" y1="6" x2="20" y2="6" stroke-width="1.5" stroke-linecap="round"/>
+              <line id="line2" x1="4" y1="12" x2="20" y2="12" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation menu -->
+        <nav id="nav-menu" class="hidden fixed inset-0 top-20 z-10 bg-[var(--color-bg)] py-8 lg:static lg:flex lg:items-center lg:bg-transparent">
+          <div class="flex flex-col items-center w-full lg:flex-row lg:justify-center lg:gap-20">
+            <a href="#about" class="decrypt-text text-3xl py-6 w-full text-center lg:py-0 lg:w-14 lg:text-[18px]">About</a>
+            <a href="#skills" class="decrypt-text text-3xl py-6 w-full text-center lg:py-0 lg:w-14 lg:text-[18px]">Skills</a>
+            <a href="#work" class="decrypt-text text-3xl py-6 w-full text-center lg:py-0 lg:w-14 lg:text-[18px]">Work</a>
+            <a href="#contact" class="decrypt-text text-3xl py-6 w-full text-center lg:py-0 lg:w-17 lg:text-[18px]">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT STARTS HERE -->
+    <main>
+      <!-- HERO SECTION -->
+      <section id="hero" class="herosc min-h-[475px] md:min-h-[568px] lg:min-h-[768px] px-4 flex flex-col justify-around items-center z-0 w-full overflow-hidden md:px-5 xl:px-10 max-w-[2560px] mx-auto">
+
+        <span class="wave">👋🏻</span>
+
+        <div class="hero-center flex flex-row justify-between md:flex md:justify-between md:items-center md:text-center md:flex-row w-full">
+
+          <div class="year flex items-center">
+            <p class="text-sm md:w-12" >2000</p>
+          </div>
+          <div class="dob hidden items-center lg:flex">
+            <p class="text-sm md:w-20">31.08</p>
+          </div>
+          <div class="hero-center leading-[1]">
+            <h1 class="text-[32px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-bold">Portfolio</h1>
+          </div>
+          <div class="status hidden gap-3 items-center lg:flex">
+            <span class="relative h-2 w-2 flex items-center">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-85"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <p class="text-sm">Available</p>
+          </div>
+          <div class="currentYear flex items-center">
+            <p class="text-sm">2025</p>
+          </div>
+        </div>
+
+        <div class="hero-bottom flex justify-between items-end lg:w-full">
+          <div class="scroll-down hidden items-center justify-center lg:flex ">
+            <div class="magneticBtn flex gap-2 bg-transparent border rounded-full relative overflow-hidden p-4 cursor-pointer hover:bg-[#eae0d8]">
+              <span class="btnInner">Scroll to explore</span>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <g transform="rotate(270 12 12)">
+                  <line x1="19" y1="12" x2="5" y2="12" />
+                  <polyline points="12 19 5 12 12 5" />
+                </g>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="image-container overflow-hidden relative w-[218px] h-[268px] flex justify-center ">
+            <img src="/assets/IMG_8556.jpg" alt="portrait" class = "scroll-img w-auto h-[110%] top-0 left-0 object-cover absolute will-change-transform scale-[1.1]"/>
+          </div>
+
+          <div class="contact hidden lg:flex gap-16 justify-center items-center">
+            <a class="phoneIcon w-15 h-15 flex justify-center items-center bg-transparent border rounded-full hover:bg-[#eae0d8]" href="tel:0825876267">
+              <img src ="/assets/phone-line-icon.svg" class="phone-icon" alt = "phone icon" width="24" height="24">
+            </a>
+
+            <a class="emailIcon w-15 h-15 flex justify-center items-center bg-transparent border rounded-full hover:bg-[#eae0d8]" href="mailto:letrongvu3182@gmail.com">
+              <img src ="/assets/envelope-line-icon.svg" class="email-icon" alt = "email icon" width="24" height="24">
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="aboutsc px-4 md:px-5 py-12 lg:py-18 xl:px-10 max-w-[2560px] mx-auto">
+        <div>
+          <p class="scroll-text md:text-xl lg:text-2xl font-normal leading-relaxed"
+            data-text="Hi! I'm Steve - a Web designer & Front-end developer from Vietnam. I started as a UI/UX designer 2 years ago. My passion lies in   front-end development which led me to learn coding - bridge the gap between design and development and giving me  the ability to bring my own ideas to life. I'm always in the spirit of learning and improving, ready to support teamwork and keep leveling up my skills through real project experience.">
+          </p>
+        </div>
+      </section>
+
+      <!-- RESPONSIBILITES (ABOUTSC) -->
+      <div class="px-4 sm:px-0 lg:px-5 py-12 lg:py-18 overflow-x-auto xl:px-10 max-w-[2560px] mx-auto">
+        <!-- SwiperJS -->
+        <div class="swiper !flex !flex-col">
+          <!-- Textbox Div -->
+          <div class="content flex justify-between items-end sm:px-4 md:px-5 lg:px-0">
+            <div class="textbox">
+              <div class="heading">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium">RESPONSIBILITES</h2>
+              </div>
+            </div>
+
+            <!-- button -->
+            <div class="hidden control lg:flex gap-16">
+              <div class="swiper-prev-btn hover:bg-[#eae0d8]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <g transform="rotate(360 12 12)">
+                    <line x1="19" y1="12" x2="5" y2="12" />
+                    <polyline points="12 19 5 12 12 5" />
+                  </g>
+                </svg>
+              </div>
+
+              <div class="swiper-next-btn hover:bg-[#eae0d8]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                  <g transform="rotate(180 12 12)">
+                    <line x1="19" y1="12" x2="5" y2="12" />
+                    <polyline points="12 19 5 12 12 5" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box lists div -->
+          <div class="swiper-wrapper flex flex-row mt-8 lg:mt-12 xl:mt-14 sm:pl-4 md:pl-5 lg:px-0">
+            <div class="swiper-slide box">
+              <div class="content-wrapper">
+                <h3 class="text-xl md:text-2xl font-medium mb-4">Design user interfaces</h3>
+                <p>
+                  My strength is focus on website design along with mobile app/dashboard, I'd love to deliver the
+                  user-friendly experience.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide box">
+              <div class="content-wrapper">
+                <h3 class="text-xl md:text-2xl font-medium mb-4">Build Front-end with code</h3>
+                <p>
+                  I turn design into websites using HTML, CSS, JavaScript - 
+                  make sure they work well and match the original design.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide box">
+              <div class="content-wrapper">
+                <h3 class="text-xl md:text-2xl font-medium mb-4">Make things responsive</h3>
+                <p>
+                  Making sure the website well-adapted on all devices is an important 
+                  task of designers and developers, I can handle both.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide box">
+              <div class="content-wrapper">
+                <h3 class="text-xl md:text-2xl font-medium mb-4">Improve user experience</h3>
+                <p>
+                  I focus on how users feel when they experience the digital products - 
+                  making things simple, useful, and easy to understand.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide box">
+              <div class="content-wrapper">
+                <h3 class="text-xl md:text-2xl font-medium mb-4">Work with teams</h3>
+                <p>
+                  I can't achieve things by myself, I'm eager to discuss, learning and listening from team.
+                  I think in most cases, we only stronger when we together.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide box">
+              <div class="content-wrapper">
+                <h3 class="text-xl md:text-2xl font-medium mb-4">Keep learning & updating</h3>
+                <p>
+                  I love learning and always look for ways to improve myself. I'm not afraid of challenges - The more challenges I face, the more I grow.
+                </p>
+                </div>
+            </div>
+          </div>
+
+          <!-- Scroll bar div -->
+          <div class="scrollbar-wrapper relative w-[30%] lg:w-[20%] xl:w-[10%] mx-auto mt-12 md:mt-16">
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILL SECTION -->
+      <section id="skills" class="skillsc px-4 lg:px-5 py-12 lg:py-18 xl:px-10 max-w-[2560px] mx-auto">
+        <div class="heading text-center">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium">SKILLS</h2>
+        </div>
+
+        <div class="logo-lists grid grid-cols-3 xl:grid-cols-8 gap-12 mt-8 lg:mt-12 xl:mt-18"> 
+          <div class="logo-item flex items-center justify-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" class="figma-icon w-12 h-12 lg:w-16 lg:h-16"/>
+          </div>
+
+          <div class="logo-item flex items-center justify-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" class="pts-icon w-12 h-12 lg:w-16 lg:h-16"/>
+          </div>
+
+          <div class="logo-item flex items-center justify-center">
+            <img src="/assets/Adobe_Illustrator_CC_icon.png" class="ai-icon w-12 h-12 lg:w-16 lg:h-16"/>
+          </div>
+
+          <div class="logo-item flex items-center justify-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="html-icon w-12 h-12 lg:w-16 lg:h-16"/>
+          </div>
+
+          <div class="logo-item flex items-center justify-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="css-icon w-12 h-12 lg:w-16 lg:h-16"/>
+          </div>
+
+          <div class="logo-item flex items-center justify-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="js-icon w-12 h-12 lg:w-16 lg:h-16"/>
+          </div>
+
+          <div class="logo-item flex items-center justify-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" class="scss-icon w-12 h-12 lg:w-16 lg:h-16"/>
+          </div>
+          
+          <div class="logo-item flex items-center justify-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" class="tailwind-icon w-12 h-12 lg:w-16 lg:h-16"/>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK SECTION -->
+      <section id="work" class="worksc px-4 lg:px-5 py-12 lg:py-18 xl:px-10 max-w-[2560px] mx-auto">
+        <div class="heading text-center">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium">WORKS</h2>
+        </div>
+
+
+        <!-- Project lists -->
+        <div class="project-lists grid md:grid-cols-12 mt-8 lg:mt-12 xl:mt-18">
+          <div class="project-item-1 md:col-[2/8] mb-15">
+            <div class="image-container overflow-hidden">
+              <a href="https://kawaconn.com/" target="_blank">
+                <img src="/assets/Kawaconn.webp" alt="Kawaconn" class="scroll-img w-full h-auto will-change-transform">
+              </a>
+            </div>
+
+            <div class="infor mt-4">
+              <h3 class="text-xl md:text-2xl font-medium">Kawaconn</h3>
+              <p class="mt-1">UI/UX Design</p>
+            </div>
+          </div>
+
+          <div class="project-item-2 md:col-[6/12] mb-15">
+            <div class="image-container overflow-hidden">
+              <a href="https://www.figma.com/design/FxI1EHYKzu9Ecc6F5i6Nsi/PHS-Zalo-App-2025?node-id=0-1&t=UVk3mFdBk1beF9Iq-1" target="_blank">
+                <img src="/assets/PHS zalo app.webp" alt="PHS Zalo App" class="scroll-img w-full h-auto will-change-transform">
+              </a>
+            </div>
+
+            <div class="infor mt-4">
+              <h3 class="text-xl md:text-2xl font-medium">PHS Zalo App</h3>
+              <p class="mt-1">App Design</p>
+            </div>
+          </div>
+
+          <div class="project-item-3 md:col-[2/8] mb-15">
+            <div class="image-container overflow-hidden">
+              <a href="https://vietnamcarcare.com/" target="_blank">
+                <img src="/assets/VCC.webp" alt="Vietnam Car Care" class="scroll-img w-full h-auto will-change-transform">
+              </a>
+            </div>
+
+            <div class="infor mt-4">
+              <h3 class="text-xl md:text-2xl font-medium">Vietnam Car Care</h3>
+              <p class="mt-1">UI/UX Design</p>
+            </div>
+          </div>
+
+          <div class="project-item-4 md:col-[6/12] mb-15">
+            <div class="image-container overflow-hidden">
+              <a href="https://www.awaydigitalhome.com/" target="_blank">
+                <img src="/assets/ADH.webp" alt="Away Digital Home" class="scroll-img w-full h-auto will-change-transform">
+              </a>
+            </div>
+
+            <div class="infor mt-4">
+              <h3 class="text-xl md:text-2xl font-medium">Away Digital Home</h3>
+              <p class="mt-1">UI/UX Design</p>
+            </div>
+          </div>
+
+          <div class="project-item-5 md:col-[2/8] mb-15">
+            <div class="image-container overflow-hidden">
+              <a href="https://www.figma.com/design/r4I1U7Cf9xioQZjPaA7Tqe/PHS-Virtual-Derivatives?node-id=0-1&t=UWxUrOfW7F0J0uwc-1" target="_blank">
+                <img src="/assets/PHS Virtual.webp" alt="PHS Virtual" class="scroll-img w-full h-auto will-change-transform">
+              </a>
+            </div>
+
+            <div class="infor mt-4">
+              <h3 class="text-xl md:text-2xl font-medium">PHS Virtual Derivatives</h3>
+              <p class="mt-1">App Design</p>
+            </div>
+          </div>
+
+          <div class="project-item-6 md:col-[6/12] mb-15">
+            <div class="image-container overflow-hidden">
+              <a href="https://wooder-iota.vercel.app/" target="_blank">
+                <img src="/assets/Wooder.webp" alt="Wooder" class="scroll-img w-full h-auto will-change-transform">
+              </a>
+            </div>
+
+            <div class="infor mt-4">
+              <h3 class="text-xl md:text-2xl font-medium">Wooder</h3>
+              <p class="mt-1">Front-end Development</p>
+            </div>
+          </div>
+
+          <div class="project-item-7 md:col-[2/8] mb-15">
+            <div class="image-container overflow-hidden">
+              <a href="https://finance-flow-kappa.vercel.app/" target="_blank">
+                <img src="/assets/finance-flow.webp" alt="Finance Flow" class="scroll-img w-full h-auto will-change-transform">
+              </a>
+            </div>
+
+            <div class="infor mt-4">
+              <h3 class="text-xl md:text-2xl font-medium">Finance Flow</h3>
+              <p class="mt-1">Front-end Development</p>
+            </div>
+          </div>
+
+          <div class="project-item-8 md:col-[6/12]">
+            <div class="image-container overflow-hidden">
+              <a href="#" target="_blank">
+                <img src="/assets/Personal portfolio.webp" alt="Personal portfolio" class="scroll-img w-full h-auto will-change-transform">
+              </a>
+            </div>
+
+            <div class="infor mt-4">
+              <h3 class="text-xl md:text-2xl font-medium">Personal Portfolio</h3>
+              <p class="mt-1">Website Design | Front-end Development</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer id="contact" class="footersc px-4 lg:px-5 py-12 lg:py-18 xl:px-10 max-w-[2560px] mx-auto">
+      <div class="flex flex-col outline outline-[#e0dbd7] px-12 py-16">
+
+        <div class="heading text-center">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium">Get in touch with me!</h2>
+        </div>
+
+        <div class="contact flex flex-col md:flex-row justify-between mt-8 md:mt-16">
+          <div class="location flex flex-col items-center mb-8 md:mb-0">
+            <div class="icon w-13 h-13 flex justify-center items-center bg-transparent border rounded-full">
+                <img src ="/assets/maps-pin-line-icon.svg" alt = "email icon" width="20" height="20">
+            </div>
+            <div class="text flex flex-col items-center mt-4">
+              <p>Address</p>
+              <span>Ho Chi Minh City</span>
+            </div>
+          </div>
+
+          <div class="phone flex flex-col items-center mb-8 md:mb-0">
+            <div class="icon w-13 h-13 flex justify-center items-center bg-transparent border rounded-full">
+              <img src ="/assets/phone-line-icon.svg" alt = "phone icon" width="20" height="20">
+            </div>
+            <div class="text flex flex-col items-center mt-4">
+              <p>Phone number</p>
+              <span>0825 876 267</span>
+            </div>
+          </div>
+
+          <div class="email flex flex-col items-center">
+            <div class="icon w-13 h-13 flex justify-center items-center bg-transparent border rounded-full">
+              <img src ="/assets/envelope-line-icon.svg" alt = "email icon" width="20" height="20">
+            </div>
+            <div class="text flex flex-col items-center mt-4">
+              <p>Email</p>
+              <span>letrongvu3182@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
